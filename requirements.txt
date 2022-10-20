@@ -1,4 +1,9 @@
 jupyter-book
+jupytext
+sphinx-proof
+ghp-import
 matplotlib
 numpy
-ghp-import
+pandas
+networkx
+algorithmx
