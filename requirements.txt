@@ -1,6 +1,9 @@
 jupyter-book
 jupytext
 sphinx-proof
+sphinx-inline-tabs
+sphinx-examples
+sphinx-click
 ghp-import
 matplotlib
 numpy
