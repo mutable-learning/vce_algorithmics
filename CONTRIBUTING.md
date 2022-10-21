@@ -23,12 +23,6 @@ wanted" is open to whoever wants to implement it.
 Look through the GitHub issues for features. Anything tagged with "enhancement"
 and "help wanted" is open to whoever wants to implement it.
 
-## Write Documentation
-
-VCE Algorithmics could always use more documentation, whether as part of the
-official VCE Algorithmics docs, in docstrings, or even on the web in blog posts,
-articles, and such.
-
 ## Submit Feedback
 
 The best way to send feedback is to file an issue on GitHub.
@@ -46,7 +40,7 @@ Ready to contribute? Here's how to set up `VCE Algorithmics` for local developme
 
 1. Fork the repo on GitHub.
 2. Clone your fork locally.
-3. Install your local copy into a virtualenv, e.g., using `conda`.
+3. Install your local copy into a virtualenv.
 4. Create a branch for local development and make changes locally.
 5. Commit your changes and push your branch to GitHub.
 6. Submit a pull request through the GitHub website.
