@@ -32,4 +32,7 @@ parts:
       - file: graph/state-graph
   - file: adt/modularisation
   - file: adt/abstraction
+- caption: Index
+  chapters:
+  - file: genindex
 
