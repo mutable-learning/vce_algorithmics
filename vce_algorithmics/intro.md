@@ -2,7 +2,7 @@
 
 ### A textbook for students studying the Algorithmics (HESS) Units 3 & 4 course as part of their Victorian Certificate of Education studies.
 
-Algorithmics involves studying the solving of real-world, practical problems through the use of computational methods. It is the foundation and starting point for Computer science and software engineering, and it is through the use and application of algorithmics that the technology we all interact with today has become reality . Most people would see algorithmics as being primarily concerned and useful for computational thinking and applications, but its application also requires students to develop models of rational thinking that can be seen as a methodical approach to problem-solving in general.
+Algorithmics involves studying how to solve real-world, practical problems through the use of computational methods. It is the foundation and starting point for Computer science and software engineering, and it is through the use and application of algorithmics that the technology we all interact with today has become reality . Most people would see algorithmics as being primarily concerned and useful for computational thinking and applications, but its application also requires students to develop models of rational thinking that can be seen as a methodical approach to problem-solving in general.
 
 Algorithmics (HESS) Units 3 & 4:
 - examines how to systematically represent information
