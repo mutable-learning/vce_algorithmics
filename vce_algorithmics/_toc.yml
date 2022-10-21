@@ -3,6 +3,33 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
+parts:
+- caption: Abstract Data Types
+  chapters:
+  - file: adt/overview
+  - file: adt/structure
+  - file: adt/types
+    sections:
+    - file: adt/set
+    - file: adt/list
+    - file: adt/array
+    - file: adt/dictionary
+    - file: adt/stack
+    - file: adt/queue
+    - file: adt/priority-queue
+  - file: graph/graphs
+    sections:
+    - file: graph/features
+    - file: graph/categories
+      sections:
+      - file: graph/undirected
+      - file: graph/directed
+      - file: graph/complete
+      - file: graph/connected
+      - file: graph/directed-acyclic
+      - file: graph/tree
+      - file: graph/decision-tree
+      - file: graph/state-graph
+  - file: adt/modularisation
+  - file: adt/abstraction
+
