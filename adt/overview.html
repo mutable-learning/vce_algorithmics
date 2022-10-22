@@ -26,6 +26,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -38,6 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -249,6 +253,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Index
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav></div>
@@ -403,12 +419,56 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-role-of-complexity">
+   The role of complexity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types">
+   Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-types">
+   Data Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract-data-types-adt">
+   Abstract Data Types (ADT)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-use-adts">
+   Why use ADTs
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -420,6 +480,39 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-role-of-complexity">
+   The role of complexity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types">
+   Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-types">
+   Data Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract-data-types-adt">
+   Abstract Data Types (ADT)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-use-adts">
+   Why use ADTs
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -429,6 +522,73 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="what-is-an-abstract-data-type-adt">
 <h1>What is an Abstract Data Type (ADT)?<a class="headerlink" href="#what-is-an-abstract-data-type-adt" title="Permalink to this headline">#</a></h1>
+<section id="the-role-of-complexity">
+<h2>The role of complexity<a class="headerlink" href="#the-role-of-complexity" title="Permalink to this headline">#</a></h2>
+<p>Computer science is primarily concerned with <strong>complexity</strong> and creating and implementing techniques for handling it.</p>
+<p>As humans, we manage complexity using techniques that allow us to function even in a complex world where we are required to perform complicated actions and manage these in real-time. Take driving a car as an example. How do we make the car move? We push the <strong>accelerator</strong> pedal. It doesn’t matter that we don’t know how pushing the pedal makes the car move, we are just interested in the result, and any car that has an accelerator will operate in pretty much the same way. The complexity of making a car move is reduced to the push of a pedal.</p>
+<p>One of the techniques humans use to manage complexity is to use labels for objects and concepts. Defining all the components that make up the object or concept and treating the assembly of these as a whole allowing for the manipulating of the ‘label’ in place of its components. This is called a <strong>metaphor</strong> by cognitive psychologists.</p>
+<p>Labels can be related to other labels, forming a collection, and these can then be given a new label, forming a hierarchy or tree of concepts, ideas and relationships.</p>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span>Example </span></p>
+<section class="example-content" id="proof-content">
+<p>A computer is a <strong>label</strong> we use to describe the millions of components that work together to allow us to watch videos or play games. We don’t know what all the components are, nor how they work together to allow the computer to function, we just know what is and is not a computer.</p>
+</section>
+</div><p>This idea of reducing the complexity to a manageable and workable level is a core tenant in computer science.</p>
+</section>
+<section id="types">
+<h2>Types<a class="headerlink" href="#types" title="Permalink to this headline">#</a></h2>
+<p>A type is a collection of values. A Boolean type is a collection of true and false values and could be defined as a <strong>simple type</strong> as its values do not have any subparts. An Integer is a collection of numbers and is also a simple type, but some types might contain multiple pieces of information, such as a student record. Information such as name, address, grades and course might be included into a record, an <strong>aggregate</strong> or <strong>composite</strong> type.</p>
+<p>It is common to hear about types being used in software development and the term is mostly used to describe an object that is a implementation of an abstract term. This implementation of the type in a programming language is where the type is defined along with the operations that can manipulate the type. This is more specifically known as a <strong>data type</strong>.</p>
+</section>
+<section id="data-types">
+<h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">#</a></h2>
+<p>If we take a type, say an integer, and the operations that manipulate integers, and then we create the implementation of this in a programming language, we will have a built an integer data type. Each programming language will have its own implementation of this data type, but they will all be a representation of the mathematical concept of an integer.</p>
+<p>A data type is a physical representation of the logical concept, and is used in the actual code to represent the object and allow operations to be performed on the object’s data. Often in programming the terms class, type and data type are used interchangeably to represent the same thing, an implementation in the particular programming language of a mathematical concept or composite structure.</p>
+<p>So how do we make a distinction between the logical idea of a data type and all these physical implementations of the idea in different programming languages? How do we reduce the complexity of having to know about how each language works and just focus on using the concept of the data type to look for solutions to problems? This is where abstract data types are used.</p>
+</section>
+<section id="abstract-data-types-adt">
+<h2>Abstract Data Types (ADT)<a class="headerlink" href="#abstract-data-types-adt" title="Permalink to this headline">#</a></h2>
+<p>An abstract data type is an object whose behaviour is defined by a set of values and a set of operations, without any information about how these are implemented.</p>
+<p>Think of an ADT as about the <strong>what</strong> not the <strong>how</strong>. The specification of an ADT tells you the rules that define the interface, the operations that are possible on the interface, the arguments needed for each operation and the type of result the operation returns.</p>
+<p>How the ADT will be implemented in any programming language is up to the developer. We don’t need to know how it is going to work, we just need to know what it is and what it can do, and now we are free to think about how we can use this ADT to start representing the parts of a problem we are trying to solve. Hiding these details from the user is known as <strong>abstraction</strong>.</p>
+<p>The creation and use of ADTs is done to manage complexity and allows us to solve difficult problems by <strong>abstracting</strong> the complexity of implementing the data type down to just thinking about the operations that are possible and what the data type provides.</p>
+<div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span>Example </span></p>
+<section class="example-content" id="proof-content">
+<p>Think of driving a car as an ADT. You can steer, accelerate and brake in all cars, but they all do these tasks differently. Some have electric motors and others combustion engines, some have power steering and others steer all four wheels. Some use disk brakes, others drum brakes or regenerative braking. The implementation of these is abstracted from the driver who just uses the interface of steering wheel, accelerator and brake pedals to drive any car. The driver is not required to understand the details of how these all work. The details are deliberately hidden from the driver.</p>
+</section>
+</div><p>ADTs:</p>
+<ul class="simple">
+<li><p>are theoretical in nature</p></li>
+<li><p>define what something does, not how it works</p></li>
+<li><p>encapsulate a type and the operations possible on this type</p></li>
+<li><p>operations are defined with argument types (input) and result types (output)</p></li>
+<li><p>the details of how operations work are abstracted from the user</p></li>
+<li><p>allows for change in the implementation of the ADT</p></li>
+</ul>
+</section>
+<section id="why-use-adts">
+<h2>Why use ADTs<a class="headerlink" href="#why-use-adts" title="Permalink to this headline">#</a></h2>
+<p>Using ADTs helps to reduce complexity, but what does this really mean in practice?</p>
+<ol class="simple">
+<li><p>Fewer bugs</p></li>
+<li><p>Ease of understanding</p></li>
+<li><p>Supports change</p></li>
+</ol>
+<p><strong>Abstracting</strong> the implementation details of the data type from the user means they can focus on using the ADT to create a solution.</p>
+<p>Using an ADT applies the concept of <strong>modularisation</strong> where the ADT can be isolated, tested and implemented by itself, separate from the whole, and reused where needed.</p>
+<p>The ADT is responsible for its own operations and these aren’t changed when other parts of the solution change. The internals of the ADT are protected from external interference. It stays consistent and is <strong>encapsulated</strong>.</p>
+<p>Consequently, with the details of how the ADT is implemented hidden from the surrounding solution, internal changes in the implementation of the ADT will not impact other parts of the solution, nor will they change the specification of the ADT itself.</p>
+<p>Finally, as ADTs do not specify implementation information, they are independent of programming languages and can be used by any programming language that can support them.</p>
+<dl class="glossary simple">
+<dt id="term-Type">Type<a class="headerlink" href="#term-Type" title="Permalink to this term">#</a></dt><dd><p>A collection of values</p>
+</dd>
+<dt id="term-Data-Type">Data Type<a class="headerlink" href="#term-Data-Type" title="Permalink to this term">#</a></dt><dd><p>A type together with operations that can be used to manipulate the type</p>
+</dd>
+<dt id="term-Abstract-Data-Type">Abstract Data Type<a class="headerlink" href="#term-Abstract-Data-Type" title="Permalink to this term">#</a></dt><dd><p>The specification of a data type including the type and the operations available on the type, without any implementation information.</p>
+</dd>
+</dl>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

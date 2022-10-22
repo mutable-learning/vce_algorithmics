@@ -26,6 +26,9 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-examples.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -38,6 +41,7 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -248,6 +252,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Index
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav></div>
@@ -402,41 +418,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-textbook-for-students-studying-the-algorithmics-hess-units-3-4-course-as-part-of-their-victorian-certificate-of-education-studies">
-   A textbook for students studying the Algorithmics (HESS) Units 3 &amp; 4 course as part of their Victorian Certificate of Education studies.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-study-algorithmics">
-   Why study Algorithmics?
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -448,24 +435,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-textbook-for-students-studying-the-algorithmics-hess-units-3-4-course-as-part-of-their-victorian-certificate-of-education-studies">
-   A textbook for students studying the Algorithmics (HESS) Units 3 &amp; 4 course as part of their Victorian Certificate of Education studies.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-study-algorithmics">
-   Why study Algorithmics?
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -475,8 +444,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="vce-algorithmics">
 <h1>VCE Algorithmics<a class="headerlink" href="#vce-algorithmics" title="Permalink to this headline">#</a></h1>
-<section id="a-textbook-for-students-studying-the-algorithmics-hess-units-3-4-course-as-part-of-their-victorian-certificate-of-education-studies">
-<h2>A textbook for students studying the Algorithmics (HESS) Units 3 &amp; 4 course as part of their Victorian Certificate of Education studies.<a class="headerlink" href="#a-textbook-for-students-studying-the-algorithmics-hess-units-3-4-course-as-part-of-their-victorian-certificate-of-education-studies" title="Permalink to this headline">#</a></h2>
+<p><strong>A textbook for students studying the Algorithmics (HESS) Units 3 &amp; 4 course as part of their Victorian Certificate of Education studies.</strong></p>
 <p>Algorithmics involves studying how to solve real-world, practical problems through the use of computational methods. It is the foundation and starting point for Computer science and software engineering, and it is through the use and application of algorithmics that the technology we all interact with today has become reality . Most people would see algorithmics as being primarily concerned and useful for computational thinking and applications, but its application also requires students to develop models of rational thinking that can be seen as a methodical approach to problem-solving in general.</p>
 <p>Algorithmics (HESS) Units 3 &amp; 4:</p>
 <ul class="simple">
@@ -495,12 +463,11 @@ title="Print to PDF"
 <li><p>ethical concerns arising from the above points</p></li>
 </ul>
 <p>This text has been created to support the Algorithmics (HESS) Units 3 &amp; 4 Study Design (2023 - 2026). It follows the study design closely and covers all the key knowledge and key skills outlined in the course. There are also questions within each section to test your knowledge and skills with the course content, and the text is structured in a way that students will be able to use the content, pseudocode and Python examples to scaffold the design and testing of their own algorithmic solutions to problems as they complete the course.</p>
-</section>
-<section id="why-study-algorithmics">
-<h2>Why study Algorithmics?<a class="headerlink" href="#why-study-algorithmics" title="Permalink to this headline">#</a></h2>
+<p><strong>Why study Algorithmics?</strong></p>
 <p>Computing is indispensable to modern society and is a key driver of innovation and progress. Computation is central to science and engineering, economics and finance, health and many other aspects of our lives. The contemporary scientific method relies extensively on simulation, virtual experimentation, computational analysis and prediction and is central to solving many of the problems we face such as climate change, social and organisational structural change, health and economic challenges. Increasingly, computational thinking is being used in disciplines not traditionally associated with a scientific or computational approach such as the arts, music and entertainment.</p>
 <p>Algorithmics is the bedrock for all computational methods and with an understanding of using algorithms, their potential and limitations, and their history and ethical impacts, developing efficient computational solutions becomes possible.</p>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
