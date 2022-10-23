@@ -11,7 +11,7 @@
 ```{prf:definition}
 :nonumber:
 :class: adt-specification
-:label: adt
+:label: List ADT specification
 
 Name: **List**<br/>
 Import: $element, boolean, integer$<br/>

@@ -11,7 +11,7 @@
 ````{prf:definition}
 :nonumber:
 :class: adt-specification
-:label: Stack ADT Specfication
+:label: Stack ADT specfication
 
 Name: **Stack**<br/>
 Import: $element, boolean$<br/>
