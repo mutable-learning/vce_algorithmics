@@ -8,8 +8,8 @@ Arrays usually allow only elements of the same type to be stored within the arra
 ## Defining Characteristics
 Arrays:
 - are of a fixed size
-- elements are ordered within the array
-- an index is assigned to each element to indicate position in the array
+- have elements ordered within the array
+- have an index assigned to each element to indicate position in the array
 
 
 ## Specification

@@ -9,8 +9,8 @@ There are two different common set types encountered. A **static** or **frozen**
 
 ## Defining Characteristics
 Sets:
-- Contain unique elements only
-- Store elements in no particular order
+- contain unique elements only
+- store elements in no particular order
 
 ## Specification
 
