@@ -516,23 +516,36 @@ title="Print to PDF"
 <h1>Set ADT<a class="headerlink" href="#set-adt" title="Permalink to this headline">#</a></h1>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
+<p>A <strong>set</strong> is an ADT that is a representation of the mathematical concept of a <span class="math notranslate nohighlight">\(finite set\)</span>. It is a collection type object allowing for multiple values to be stored in the ADT. Rather than using it as a storage type for moving objects in and out of the collection, like you might use an array, a set is especially useful when you want to test the membership of a value or compare groups of values with each other.</p>
+<p>Many other ADTs could be viewed as being a set with additional operations or rules (axioms) applied to create difference with a standard set ADT. Generally, set ADTs will have operations to perform the algebra of sets, namely operations for: union, intersection, difference and subset.</p>
+<p>There are two different common set types encountered. A <strong>static</strong> or <strong>frozen</strong> set is one that does not change after it is created, allowing only querying of the set elements for membership, and a <strong>dynamic</strong> or <strong>mutable</strong> set, which also allows for insertion and deletion of elements after construction.</p>
 </section>
 <section id="defining-characteristics">
 <h2>Defining Characteristics<a class="headerlink" href="#defining-characteristics" title="Permalink to this headline">#</a></h2>
+<p>Sets:</p>
+<ul class="simple">
+<li><p>contain unique elements only</p></li>
+<li><p>store elements in no particular order</p></li>
+</ul>
 </section>
 <section id="specification">
 <h2>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">#</a></h2>
+<p>The specification for a set ADT will typically contain operations similar to below:</p>
 <div class="proof definition adt-specification admonition" id="Set ADT specification">
 <p class="admonition-title"><span>Definition </span></p>
 <section class="definition-content" id="proof-content">
-<p>Name: <strong>Set</strong><br/>
-Import: <span class="math notranslate nohighlight">\(element, boolean\)</span><br/>
-Operations:<br/>
-<span class="math notranslate nohighlight">\(new: \space\rightarrow set\)</span><br/>
-<span class="math notranslate nohighlight">\(empty: set \rightarrow boolean\)</span><br/>
-<span class="math notranslate nohighlight">\(insert: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow set\)</span><br/>
-<span class="math notranslate nohighlight">\(member: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow boolean\)</span><br/>
-<span class="math notranslate nohighlight">\(remove: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow set\)</span><br/></p>
+<p>Name: <strong>Set</strong><br />
+Import: <span class="math notranslate nohighlight">\(element, boolean\)</span><br />
+Operations:<br />
+<span class="math notranslate nohighlight">\(new: \space\rightarrow set\)</span><br />
+<span class="math notranslate nohighlight">\(empty: set \rightarrow boolean\)</span><br />
+<span class="math notranslate nohighlight">\(add: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow set\)</span><br />
+<span class="math notranslate nohighlight">\(member: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow boolean\)</span><br />
+<span class="math notranslate nohighlight">\(remove: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow set\)</span><br />
+<span class="math notranslate nohighlight">\(union: set\)</span> x <span class="math notranslate nohighlight">\(set \rightarrow set\)</span><br />
+<span class="math notranslate nohighlight">\(intersection: set\)</span> x <span class="math notranslate nohighlight">\(set \rightarrow set\)</span><br />
+<span class="math notranslate nohighlight">\(difference: set\)</span> x <span class="math notranslate nohighlight">\(set \rightarrow set\)</span><br />
+<span class="math notranslate nohighlight">\(subset: set\)</span> x <span class="math notranslate nohighlight">\(set \rightarrow set\)</span><br /></p>
 </section>
 </div></section>
 <section id="examples">

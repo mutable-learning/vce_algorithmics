@@ -458,6 +458,11 @@ title="Print to PDF"
    Specification
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -492,6 +497,11 @@ title="Print to PDF"
    Specification
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -506,13 +516,22 @@ title="Print to PDF"
 <h1>Stack ADT<a class="headerlink" href="#stack-adt" title="Permalink to this headline">#</a></h1>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
+<p>A <strong>stack</strong> is a collection type of object that follows the rule of ‘last in first out’ (<strong>LIFO</strong>). A stack is similar to the list ADT with the added rule that elements can only be added or removed from one end of the stack. Elements can be added to the stack with the <strong>push</strong> operation, and removed from the stack with the <strong>pop</strong> operation. An additional operation known as <strong>top</strong> or <strong>peek</strong> can return the value of the most recently added element without altering the stack.</p>
 </section>
 <section id="defining-characteristics">
 <h2>Defining Characteristics<a class="headerlink" href="#defining-characteristics" title="Permalink to this headline">#</a></h2>
+<p>Stacks:</p>
+<ul class="simple">
+<li><p>allow for adding and removing of elements to one end only</p></li>
+<li><p>will have the most recently added item will also being the one removed first (LIFO)</p></li>
+<li><p>will have the <strong>top</strong> of the stack containing the most recently added item</p></li>
+<li><p>will maintain the order of elements in the order they were added to the stack</p></li>
+</ul>
 </section>
 <section id="specification">
 <h2>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">#</a></h2>
-<div class="proof definition adt-specification admonition" id="Stack ADT specfication">
+<p>The specification for a stack ADT will typically contain operations similar to below:</p>
+<div class="proof definition adt-specification admonition" id="Stack ADT specification">
 <p class="admonition-title"><span>Definition </span></p>
 <section class="definition-content" id="proof-content">
 <p>Name: <strong>Stack</strong><br/>
@@ -523,14 +542,11 @@ Operations:<br/>
 <span class="math notranslate nohighlight">\(push:   stack\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow stack\)</span><br/>
 <span class="math notranslate nohighlight">\(pop:    stack \rightarrow stack\)</span><br/>
 <span class="math notranslate nohighlight">\(top:    stack \rightarrow element\)</span><br/></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-
-<span class="c1">## Examples</span>
-</pre></div>
-</div>
 </section>
 </div></section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

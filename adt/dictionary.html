@@ -516,12 +516,19 @@ title="Print to PDF"
 <h1>Dictionary or Associative Array ADT<a class="headerlink" href="#dictionary-or-associative-array-adt" title="Permalink to this headline">#</a></h1>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
+<p>A <strong>dictionary</strong> is a collection type of ADT that stores each element with an associated key, a key-value pair. In mathematical terms a dictionary or <strong>associative array</strong> is a function with <span class="math notranslate nohighlight">\(finite\)</span> domain. The key is ‘associated’ with the value and acts as a kind of index for the ADT.</p>
 </section>
 <section id="defining-characteristics">
 <h2>Defining Characteristics<a class="headerlink" href="#defining-characteristics" title="Permalink to this headline">#</a></h2>
+<p>Dictionaries:</p>
+<ul class="simple">
+<li><p>have a key and a value associated with the key</p></li>
+<li><p>keys are unique</p></li>
+</ul>
 </section>
 <section id="specification">
 <h2>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">#</a></h2>
+<p>The specification for a dictionary ADT will typically contain operations similar to below:</p>
 <div class="proof definition adt-specification admonition" id="Dictionary ADT specification">
 <p class="admonition-title"><span>Definition </span></p>
 <section class="definition-content" id="proof-content">
@@ -532,7 +539,7 @@ Operations:<br/>
 <span class="math notranslate nohighlight">\(empty: dictionary \rightarrow boolean\)</span><br/>
 <span class="math notranslate nohighlight">\(size: dictionary \rightarrow integer\)</span><br />
 <span class="math notranslate nohighlight">\(get: dictionary\)</span> x <span class="math notranslate nohighlight">\(key \rightarrow value\)</span><br/>
-<span class="math notranslate nohighlight">\(set: dictionary\)</span> x <span class="math notranslate nohighlight">\(key\)</span> x <span class="math notranslate nohighlight">\(value \rightarrow dictionary\)</span><br/>
+<span class="math notranslate nohighlight">\(insert: dictionary\)</span> x <span class="math notranslate nohighlight">\(key\)</span> x <span class="math notranslate nohighlight">\(value \rightarrow dictionary\)</span><br/>
 <span class="math notranslate nohighlight">\(remove: dictionary\)</span> x <span class="math notranslate nohighlight">\(key \rightarrow dictionary\)</span><br/></p>
 </section>
 </div></section>
