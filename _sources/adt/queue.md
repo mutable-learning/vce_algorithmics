@@ -26,7 +26,7 @@ $new:    \space\rightarrow queue$<br/>
 $empty:  queue \rightarrow boolean$<br/>
 $enqueue:   queue$ x $element \rightarrow queue$<br/>
 $dequeue:    queue \rightarrow queue$<br/>
-$top:    stack \rightarrow element$<br/>
+$peek:    queue \rightarrow element$<br/>
 
 
 ```
