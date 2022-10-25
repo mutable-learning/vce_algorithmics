@@ -1,7 +1,7 @@
 # Set ADT
 
 ## Description
-A **set** is an ADT that is a representation of the mathematical concept of a 'finite set'. It is a collection type object allowing for multiple values to be stored in the ADT. Rather than using it as a storage type for moving objects in and out of the collection, like you might use an array, a set is especially useful when you want to test the membership of a value or compare groups of values with each other.
+A **set** is an ADT that is a representation of the mathematical concept of a $finite set$. It is a collection type object allowing for multiple values to be stored in the ADT. Rather than using it as a storage type for moving objects in and out of the collection, like you might use an array, a set is especially useful when you want to test the membership of a value or compare groups of values with each other.
 
 Many other ADTs could be viewed as being a set with additional operations or rules (axioms) applied to create difference with a standard set ADT. Generally, set ADTs will have operations to perform the algebra of sets, namely operations for: union, intersection, difference and subset.
 
