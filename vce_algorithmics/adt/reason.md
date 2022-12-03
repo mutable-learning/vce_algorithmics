@@ -101,7 +101,7 @@ ADTs are not magic and you can make your own. There are many hundreds of differe
 - each operation's behaviour should be coherent and not something just to support special cases
 - the set of operations should allow the type to be useful for its intended purpose and audience
 - types should be either generic or domain specific, but not a mix of the two
-- each type must be **representation independant**, with changes in implementation having no effect on code outside the type itself
+- each type must be **representation independent**, with changes in implementation having no effect on code outside the type itself
 
 ```{note}
 
