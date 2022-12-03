@@ -7,7 +7,7 @@ parts:
 - caption: Abstract Data Types
   chapters:
   - file: adt/overview
-  - file: adt/structure
+  - file: adt/reason
   - file: adt/types
     sections:
     - file: adt/set
