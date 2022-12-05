@@ -54,11 +54,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://mutable-learning.github.io/vce_algorithmics/adt/types.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Set ADT" href="set.html" />
-    <link rel="prev" title="What is the structure of an ADT?" href="structure.html" />
+    <link rel="prev" title="Why would we create an ADT?" href="reason.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -122,8 +124,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="structure.html">
-   What is the structure of an ADT?
+  <a class="reference internal" href="reason.html">
+   Why would we create an ADT?
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -419,12 +421,63 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-to-define-an-adt-specification">
+   Steps to define an ADT specification
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-state-the-types-name">
+     Step 1 - state the type’s name
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-list-any-imports">
+     Step 2 - list any imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-list-the-types-operations">
+     Step 3 - List the type’s operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-adt-specification">
+   Example ADT specification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#is-that-all">
+   Is that all?
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -436,6 +489,46 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-to-define-an-adt-specification">
+   Steps to define an ADT specification
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-state-the-types-name">
+     Step 1 - state the type’s name
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-list-any-imports">
+     Step 2 - list any imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-list-the-types-operations">
+     Step 3 - List the type’s operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-adt-specification">
+   Example ADT specification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#is-that-all">
+   Is that all?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -445,6 +538,110 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="adt-specifications">
 <h1>ADT Specifications<a class="headerlink" href="#adt-specifications" title="Permalink to this headline">#</a></h1>
+<p>There are many different ways to write abstract data type specifications, and often you will see these written online in ways that suit or are considered the standard for a particular language that the type will be implemented in.</p>
+<p>In this book we will be using a simple syntax to define our ADT specifications and the steps below will outline how this works. Keep in mind that there are other ways you will see specifications written and the important understanding is that the operations of the ADT are clearly defined and understandable.</p>
+<section id="steps-to-define-an-adt-specification">
+<h2>Steps to define an ADT specification<a class="headerlink" href="#steps-to-define-an-adt-specification" title="Permalink to this headline">#</a></h2>
+<p>Follow the steps below to create your type specification:</p>
+<section id="step-1-state-the-types-name">
+<h3>Step 1 - state the type’s name<a class="headerlink" href="#step-1-state-the-types-name" title="Permalink to this headline">#</a></h3>
+<p>You must clearly define the name of your type. You can do this with a line such as:</p>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 1 </span></p>
+<section class="example-content" id="proof-content">
+<p>Name: Array</p>
+</section>
+</div></section>
+<section id="step-2-list-any-imports">
+<h3>Step 2 - list any imports<a class="headerlink" href="#step-2-list-any-imports" title="Permalink to this headline">#</a></h3>
+<p>If your specifications for your operations use any other types, list them as imports for this type:</p>
+<div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 2 </span></p>
+<section class="example-content" id="proof-content">
+<p>Imports: boolean, integer, element</p>
+</section>
+</div></section>
+<section id="step-3-list-the-types-operations">
+<h3>Step 3 - List the type’s operations<a class="headerlink" href="#step-3-list-the-types-operations" title="Permalink to this headline">#</a></h3>
+<p>Each operation the type has should be listed on its own line.</p>
+<p>Start with a label to show the list of operations that make up the type.</p>
+<p>Then list each operation where each operation specification has the following components:</p>
+<ul class="simple">
+<li><p>the name of the operation</p></li>
+<li><p>a colon after the name</p></li>
+<li><p>any types required as input (separated with an <em>x</em>)</p></li>
+<li><p>an arrow pointing to the right (pointing to the output)</p></li>
+<li><p>any types returned as the output</p></li>
+</ul>
+<p>An example of some operations could be:</p>
+<div class="proof example admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 3 </span></p>
+<section class="example-content" id="proof-content">
+<p>Operations:<br />
+createList : <span class="math notranslate nohighlight">\(\rightarrow\)</span> List<br />
+isEmpty : List <span class="math notranslate nohighlight">\(\rightarrow\)</span> boolean<br />
+add : List x element <span class="math notranslate nohighlight">\(\rightarrow\)</span> List<br /></p>
+</section>
+</div></section>
+</section>
+<section id="example-adt-specification">
+<h2>Example ADT specification<a class="headerlink" href="#example-adt-specification" title="Permalink to this headline">#</a></h2>
+<p>Putting these steps all together, you could create a specification for an <strong>Array</strong> ADT like the example below:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>x</em> between the input types does not indicate multiplication, it just separates the types.</p>
+</div>
+</aside>
+<div class="proof example admonition" id="example-3">
+<p class="admonition-title"><span class="caption-number">Example 4 </span></p>
+<section class="example-content" id="proof-content">
+<p>Name: <strong>Array</strong><br/>
+Import: <span class="math notranslate nohighlight">\(element, integer\)</span><br/>
+Operations:<br/>
+<span class="math notranslate nohighlight">\(newArray: \space\rightarrow array\)</span><br/>
+<span class="math notranslate nohighlight">\(get: array\)</span> x <span class="math notranslate nohighlight">\(integer \rightarrow element\)</span><br/>
+<span class="math notranslate nohighlight">\(set: array\)</span> x <span class="math notranslate nohighlight">\(integer\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow array\)</span><br/></p>
+</section>
+</div></section>
+<section id="is-that-all">
+<h2>Is that all?<a class="headerlink" href="#is-that-all" title="Permalink to this headline">#</a></h2>
+<p>The steps and examples listed above are not all that you would need in order to build an implementation of an ADT. One part that would be included normally are the axioms that demonstrate the behaviour of the operations, written in formal language these equations demonstrate the behaviour of the operations when used and provide meaning to each operation.</p>
+<p>Each axiom is an example of behaviour that results in a true state. It proves the operations’ behaviour.</p>
+<p>For our purposes in VCE Algorithmics we will not include the axia with each ADT. However, an example of how it could look for a Set ADT is given below.</p>
+<div class="proof example admonition" id="example-4">
+<p class="admonition-title"><span class="caption-number">Example 5 </span></p>
+<section class="example-content" id="proof-content">
+<p>Name: <strong>Set</strong><br/>
+Import: <span class="math notranslate nohighlight">\(element, boolean, integer\)</span><br/>
+Operations:<br/>
+<span class="math notranslate nohighlight">\(newSet: \space\rightarrow set\)</span><br/>
+<span class="math notranslate nohighlight">\(addElement: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow set\)</span><br/>
+<span class="math notranslate nohighlight">\(remElement: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow set\)</span><br/>
+<span class="math notranslate nohighlight">\(hasElement: set\)</span> x <span class="math notranslate nohighlight">\(element \rightarrow boolean\)</span><br/>
+<span class="math notranslate nohighlight">\(size: set \rightarrow integer\)</span><br /></p>
+<p>Properties:</p>
+<ul class="simple">
+<li><p>the set has no duplicates</p></li>
+<li><p>set items have no order</p></li>
+</ul>
+<p>Axioms:<br/>
+// on hasElement and addElement<br/>
+<span class="math notranslate nohighlight">\(if\ hasElement(S,e)\ then\ addElement(S,e)) = S\)</span><br/>
+<span class="math notranslate nohighlight">\(hasElement(addElement(S,e),e) = true\)</span><br/>
+<span class="math notranslate nohighlight">\(if\ hasElement(S,e)\ and\ e \ne f\ then\ hasElement(addElement(S,f),e)\)</span><br/></p>
+<p>// on hasElement and remElement<br/>
+<span class="math notranslate nohighlight">\(if\ (not\ hasElement(S,e))\ then\ remElement(S,e) = S\)</span><br/>
+<span class="math notranslate nohighlight">\(hasElement(remElement(S,e),e) = false\)</span><br/>
+<span class="math notranslate nohighlight">\(if\ hasElement(S,e)\ and\ e \ne f\ then\ hasElement(remElement(S,f),e)\)</span><br/></p>
+<p>// on addElement/remElement and size<br/>
+<span class="math notranslate nohighlight">\(if\ (not hasElement(S,e))\ then\ size(addElement(S,e)) = size(S) + 1\)</span><br/>
+<span class="math notranslate nohighlight">\(if\ hasElement(S,e)\ then\ size(remElement(S,e)) = size(S) - 1\)</span><br/></p>
+<p>// on addElement and remElement<br/>
+<span class="math notranslate nohighlight">\(remElement(addElement(S,e),e) = S\)</span><br/></p>
+</section>
+</div></section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -476,11 +673,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="structure.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="reason.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">What is the structure of an ADT?</p>
+            <p class="prev-next-title">Why would we create an ADT?</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="set.html" title="next page">

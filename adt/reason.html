@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What is the structure of an ADT? &#8212; VCE Algorithmics</title>
+    <title>Why would we create an ADT? &#8212; VCE Algorithmics</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mutable-learning.github.io/vce_algorithmics/adt/structure.html" />
+    <link rel="canonical" href="https://mutable-learning.github.io/vce_algorithmics/adt/reason.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ADT Specifications" href="types.html" />
@@ -123,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   What is the structure of an ADT?
+   Why would we create an ADT?
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -354,7 +354,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mutable-learning/vce_algorithmics/issues/new?title=Issue%20on%20page%20%2Fadt/structure.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mutable-learning/vce_algorithmics/issues/new?title=Issue%20on%20page%20%2Fadt/reason.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -382,7 +382,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/adt/structure.md"
+        <a href="../_sources/adt/reason.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -419,23 +419,148 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-understanding">
+   Key understanding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principles-of-adts">
+   Principles of ADTs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abstraction">
+     Abstraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modularity">
+     Modularity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encapsulation">
+     Encapsulation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#information-hiding">
+       Information Hiding
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#separation-of-concerns">
+       Separation of Concerns
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classifying-adt-operations">
+   Classifying ADT Operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#designing-an-abstract-data-type">
+   Designing an Abstract Data Type
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What is the structure of an ADT?</h1>
+                <h1>Why would we create an ADT?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-understanding">
+   Key understanding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principles-of-adts">
+   Principles of ADTs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abstraction">
+     Abstraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modularity">
+     Modularity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encapsulation">
+     Encapsulation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#information-hiding">
+       Information Hiding
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#separation-of-concerns">
+       Separation of Concerns
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classifying-adt-operations">
+   Classifying ADT Operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#designing-an-abstract-data-type">
+   Designing an Abstract Data Type
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -443,8 +568,151 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-is-the-structure-of-an-adt">
-<h1>What is the structure of an ADT?<a class="headerlink" href="#what-is-the-structure-of-an-adt" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="why-would-we-create-an-adt">
+<h1>Why would we create an ADT?<a class="headerlink" href="#why-would-we-create-an-adt" title="Permalink to this headline">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Reduce bugs</div>
+<p class="sd-card-text">Works correctly and will keep working</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Simple to understand</div>
+<p class="sd-card-text">Everyone knows what it does</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Allows for change</div>
+<p class="sd-card-text">Can accommodate implementation changes</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="key-understanding">
+<h2>Key understanding<a class="headerlink" href="#key-understanding" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>An ADT is characterized by the operations you can perform on it</p></li>
+<li><p>These operations constitute its Abstraction. <em>This is the public part, visible to clients who use the type.</em></p></li>
+<li><p>The ADT separates the use of a data structure in a program from the way the data structure has been implemented in the programming language</p></li>
+<li><p>This removes the problem of users making assumptions about the ADT’s internal implementation</p></li>
+</ol>
+<p>The aim of an abstract data type is to reduce the complexity of the problem by removing the ‘how’. The user does not need to know how something works, they just know what it can do. This is done by restricting the user to only being able to interact with the ADT by using its operations. How each operation works is not important, only that the user knows the operation exists, any inputs the operation requires, and what the output will be.</p>
+<p>In this way the user can be confident that the ADT will not change in the future, and they only need to understand and use the operations available. A simple, consistent idea is created and communicated to anyone who wants to use the ADT, and the complexity of how it works is hidden completely from the user. Additionally, the user can be confident that the ADT can be reused as required and also does not allow for any ‘unknown’ method of modifying the internal information stored in the ADT.</p>
+</section>
+<section id="principles-of-adts">
+<h2>Principles of ADTs<a class="headerlink" href="#principles-of-adts" title="Permalink to this headline">#</a></h2>
+<p>We can specify these attributes as principles that an ADT embodies:</p>
+<section id="abstraction">
+<span id="index-0"></span><span id="id1"></span><h3>Abstraction<a class="headerlink" href="#abstraction" title="Permalink to this headline">#</a></h3>
+<p>Hiding low-level information and presenting a simpler, higher-level idea.</p>
+</section>
+<section id="modularity">
+<span id="index-1"></span><span id="id2"></span><h3>Modularity<a class="headerlink" href="#modularity" title="Permalink to this headline">#</a></h3>
+<p>Deconstructing a system into parts or modules. Each of these can be implemented, tested, and reused as separate objects.</p>
+</section>
+<section id="encapsulation">
+<span id="index-2"></span><h3>Encapsulation<a class="headerlink" href="#encapsulation" title="Permalink to this headline">#</a></h3>
+<p>Creating a boundary around a module so that all internal behaviour of the module is handled by the module. There is no other way to change the module’s internals, ensuring its integrity.</p>
+<p>Additionally, we can also state that ADTs provide:</p>
+<section id="information-hiding">
+<h4>Information Hiding<a class="headerlink" href="#information-hiding" title="Permalink to this headline">#</a></h4>
+<p>The implementation of the module is not visible to the rest of the system, meaning that it can be changed as needed without imposing changes on the rest of the system as well.</p>
+</section>
+<section id="separation-of-concerns">
+<h4>Separation of Concerns<a class="headerlink" href="#separation-of-concerns" title="Permalink to this headline">#</a></h4>
+<p>A feature (concern) is the responsibility of a single module. It is not spread across multiple modules, reducing complexity and improving understanding.</p>
+</section>
+</section>
+</section>
+<section id="classifying-adt-operations">
+<h2>Classifying ADT Operations<a class="headerlink" href="#classifying-adt-operations" title="Permalink to this headline">#</a></h2>
+<p>The operations an ADT supports are how users interact with and understand the type. Each operation is defined by the inputs it requires (if any) and then the output it provides (if any). Operations can categorized into four main groups, and these groups represent the way the operation ‘acts’:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Constructors</div>
+<p class="sd-card-text">Constructs a new object of the type. A constructor may take other types as arguments to create the object, but not an object of the type being constructed.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Also referred to as Creators</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Producers</div>
+<p class="sd-card-text">Produce a new object of the type from one or more existing objects of the type.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Accessors</div>
+<p class="sd-card-text">Access the type and return objects of a different type.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Also referred to as Observers or Property operations</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Mutators</div>
+<p class="sd-card-text">Change objects in some way.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Also referred to as Manipulators or Transformers</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>You will note that these groups are known by multiple different names at times. The name of the group is not important, it is the idea of what the group represents that is important. Creators or constructor operations? It doesn’t matter. Just recognise that these operations create new objects of the type, another type of operations manipulate the type and so on.</p>
+<a class="reference internal image-reference" href="../_images/ADT-diagram.png"><img alt="ADT Diagram" class="align-center" src="../_images/ADT-diagram.png" style="width: 300px;" /></a>
+</section>
+<section id="designing-an-abstract-data-type">
+<h2>Designing an Abstract Data Type<a class="headerlink" href="#designing-an-abstract-data-type" title="Permalink to this headline">#</a></h2>
+<p>ADTs are not magic and you can make your own. There are many hundreds of different ADTs already widely known, often with only a small difference separating different types. Some things to remember when designing an ADT are:</p>
+<ul class="simple">
+<li><p>aim for a few, simple operations</p></li>
+<li><p>aim for these operations to support being combined in powerful ways</p></li>
+<li><p>avoid complex operations</p></li>
+<li><p>each operation should have a well defined purpose</p></li>
+<li><p>each operation’s behaviour should be coherent and not something just to support special cases</p></li>
+<li><p>the set of operations should allow the type to be useful for its intended purpose and audience</p></li>
+<li><p>types should be either generic or domain specific, but not a mix of the two</p></li>
+<li><p>each type must be <strong>representation independent</strong>, with changes in implementation having no effect on code outside the type itself</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Abstract data types</strong> : are characterized by their operations</p>
+<p><strong>Operations</strong> : can be classified as <em>constructors</em>, <em>producers</em>, <em>accessors</em>, or <em>mutators</em></p>
+<p><strong>An ADT’s specification</strong> : is its set of operations and their specifications</p>
+<p><strong>A good ADT</strong> : is simple, adequate, coherent, and independent of its implementation</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
