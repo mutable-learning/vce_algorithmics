@@ -1,1 +1,0 @@
-# What is the structure of an ADT?
