@@ -24,7 +24,7 @@ The specification for a set ADT will typically contain operations similar to bel
 Name: **Set**<br />
 Import: $element, boolean$<br />
 Operations:<br />
-$new: \space\rightarrow set$<br />
+$newSet: \space\rightarrow set$<br />
 $empty: set \rightarrow boolean$<br />
 $add: set$ x $element \rightarrow set$<br />
 $member: set$ x $element \rightarrow boolean$<br />

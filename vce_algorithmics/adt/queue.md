@@ -22,7 +22,7 @@ The specification for a queue ADT will typically contain operations similar to b
 Name: **Queue**<br/>
 Import: $element, boolean$<br/>
 Operations:<br/>
-$new:    \space\rightarrow queue$<br/>
+$newQueue:    \space\rightarrow queue$<br/>
 $empty:  queue \rightarrow boolean$<br/>
 $enqueue:   queue$ x $element \rightarrow queue$<br/>
 $dequeue:    queue \rightarrow queue$<br/>
