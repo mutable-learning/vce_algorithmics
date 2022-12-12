@@ -24,7 +24,7 @@ The specification for an array ADT will typically contain operations similar to 
 Name: **Array**<br/>
 Import: $element, boolean, integer$<br/>
 Operations:<br/>
-$new: \space\rightarrow array$<br/>
+$newArray: \space\rightarrow array$<br/>
 $get: array$ x $integer \rightarrow element$<br/>
 $set: array$ x $integer$ x $element \rightarrow array$<br/>
 
