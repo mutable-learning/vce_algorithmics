@@ -7,7 +7,7 @@ A **queue** is a collection type of object that follows the rule of 'first in fi
 Queues:
 - allow for adding at one end and removing of elements at the other end
 - follow the first in first out rule (FIFO)
-- will have the **front** of the queue containing the most recently added item
+- will have the **front** of the queue containing the oldest added item
 - will maintain the order of elements in the order they were added to the queue
 
 ## Specification
