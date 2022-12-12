@@ -25,9 +25,9 @@ Import: $element, boolean, integer$<br/>
 Operations:<br/>
 $newPQueue:    \space\rightarrow pqueue$<br/>
 $empty:  pqueue \rightarrow boolean$<br/>
-$insert\_with\_priority:   pqueue$ x $element$ x $integer \rightarrow pqueue$<br/>
-$get\_maximum\_element:    pqueue \rightarrow pqueue$<br/>
-$find\_max:    pqueue \rightarrow element$<br/>
+$insertWithPriority:   pqueue$ x $element$ x $integer \rightarrow pqueue$<br/>
+$getMaxElement:    pqueue \rightarrow pqueue$<br/>
+$findMax:    pqueue \rightarrow element$<br/>
 
 
 ```
