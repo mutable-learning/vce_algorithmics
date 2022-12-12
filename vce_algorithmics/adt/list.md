@@ -20,7 +20,7 @@ The specification for a list ADT will typically contain operations similar to be
 Name: **List**<br/>
 Import: $element, boolean, integer$<br/>
 Operations:<br/>
-$new: \space\rightarrow list$<br/>
+$newList: \space\rightarrow list$<br/>
 $empty: list \rightarrow boolean$<br/>
 $size: list \rightarrow integer$<br />
 $get: list$ x $integer \rightarrow element$<br/>

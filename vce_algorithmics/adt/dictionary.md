@@ -20,7 +20,7 @@ The specification for a dictionary ADT will typically contain operations similar
 Name: **Dictionary**<br/>
 Import: $key, value, boolean, integer$<br/>
 Operations:<br/>
-$new: \space\rightarrow dictionary$<br/>
+$newDictionary: \space\rightarrow dictionary$<br/>
 $empty: dictionary \rightarrow boolean$<br/>
 $size: dictionary \rightarrow integer$<br />
 $get: dictionary$ x $key \rightarrow value$<br/>
