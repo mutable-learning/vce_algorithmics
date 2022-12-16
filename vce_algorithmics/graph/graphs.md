@@ -62,9 +62,6 @@ A directed graph with the arrows showing the orientation of each edge
 
 ::::
 
-
-
-
 We will go into each of these types of graphs and all their features and differences in much more detail later on. For now though we will state that all graphs can be represented as an abstract data type in the same way you can represent a list or queue.
 
 ## Defining Characteristics
